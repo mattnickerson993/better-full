@@ -1,0 +1,6 @@
+Dear {{patient}},
+
+It was great seeing you at your recent appointment with Dr. {{doctor}} on {{date|date:"l F jS, Y"}} at {{date|date:"P"}}. Please click the link below to 
+review your questions from the visit and let Dr. {{doctor}} know whether or not you feel they were answered. 
+
+Click here: {{SITE_URL}}/{{path}}

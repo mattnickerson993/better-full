@@ -1,0 +1,6 @@
+Dear {{patient}},
+
+You have have an upcoming appointment with Doctor {{doctor}} on {{date|date:"l F jS, Y"}} at {{date|date:"P"}}. In order to ensure your
+needs are met please click the link below to let us know what questions or concerns you would like 
+to address during your appointment.  
+Click here: {{SITE_URL}}/{{path}}
