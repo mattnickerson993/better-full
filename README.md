@@ -8,7 +8,7 @@
 ### How to run the backend?
 
 - enter the backend folder
-- create a virtual environment
+- create a virtual environment via the following( could use use virtual env of your choice)
 ```
 $ python venv env
 
