@@ -12,7 +12,7 @@ Better is a webapp designed to to improve the quality of primary care physician 
 - By clicking a link in the email, the patient is taken to a form where they may provide up to 7 questions/concerns relating to their upcoming appointment. They may do so via text or voice. **The webapp is designed so patients do not have to create an account. Ease of access for the patient and avoidance of confusion was a strong priority in design**
 - The physician will receive the patient's questions and concerns and may review them prior to the visit. Ideally the physician can pull up these questions during the visit to review with the patient. Upon visit conclusion, the physician will confirm the questions have been reviewed.
 - The patient will receive an automated email with a link where they may review there questions from the recent appointment. They are given the opporuity to let the physician know which questions they feel were adequately addressed.
-- The physician will receive the patients feedback and be given opporunity to quickly send an email to the patient to address clarifications or concerns if deemed necessary.
+- The physician will receive the patient's feedback and be given the opporunity to quickly send an email to the patient to address clarifications or concerns if deemed necessary.
 - Physicians will also have access to score reports for all appointments and for a 30 day period. 
 - Physicians will also have access to a patient and appointment archive where they can store older inactive patients and old appointment data.
 - The webapp is fully mobile repsonsive.
