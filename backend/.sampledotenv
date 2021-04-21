@@ -1,0 +1,5 @@
+export DJANGO_DEBUG=True_or_False
+export DATABASE_URL=postgres://db_user_here:<db_password_here>@127.0.0.1:5432/db_name_here
+export EMAIL_HOST_USER=EMAIL_USER_HERE
+export EMAIL_HOST_PASSWORD=EMAIL_PASSWORD_HERE
+export SECRET_KEY=SECRET_KEY_HERE
