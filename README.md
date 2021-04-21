@@ -101,4 +101,4 @@ $ createdb your_database_name_here
     $ npm run start
 ```
 
--you will need to run the backend on port 8000 and the frontend on 3000 simultaneously.
+-you will need to run the backend on port 8000 and the frontend on 3000 via two terminal windows.
