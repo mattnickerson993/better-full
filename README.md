@@ -17,7 +17,7 @@ $ source env/bin/activate
 ```
 
 - run pip install -r requirements.txt
-- You will need postgres installed....create a postgres database via the following command:
+- You will need postgres installed....create a postgres database via the following command (if not you can use SQLITE3):
 
 ```
 $ createdb your_database_name_here
@@ -33,6 +33,10 @@ $ createdb your_database_name_here
  ```
     
 - configure .env file (see .sampledotenv_file), you can use a gmail account but will need 2 factor auth turned off
+- run the following command:
+```
+    $ export DJANGO_READ_DOT_ENV_FILE=True
+```
 - run migrations
 - run server via python manage.py runserver
 
