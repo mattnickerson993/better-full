@@ -28,7 +28,7 @@ Better is a webapp designed to to improve the quality of primary care physician 
 - Django Rest Framework
 
 **Auth**
-- JSON web token via Djoser, Django Rest Framework and Django simple
+- JSON web token via Djoser, Django Rest Framework and django-rest-framework-simplejwt
 
 
 
