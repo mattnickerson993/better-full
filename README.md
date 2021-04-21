@@ -22,7 +22,7 @@ $ source env/bin/activate
 ```
 $ createdb your_database_name_here
 ```
-- Configure the postgres database for running application and tests
+- Configure the postgres database for running application and tests ( inside psql)
 
 ```
     $ CREATE USER your_username_here WITH PASSWORD 'your_password_here';
