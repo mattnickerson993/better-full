@@ -25,11 +25,11 @@ $ createdb your_database_name_here
 - Configure the postgres database for running application and tests ( inside psql)
 
 ```
-    $ CREATE USER your_username_here WITH PASSWORD 'your_password_here';
+    postgres=# CREATE USER your_username_here WITH PASSWORD 'your_password_here';
 
-    $ GRANT ALL PRIVILEGES ON DATABASE your_database_name_here TO your_username_here;
+    postgres=# GRANT ALL PRIVILEGES ON DATABASE your_database_name_here TO your_username_here;
     
-    $ ALTER ROLE your_username_here CREATEDB;
+    postgres=# ALTER ROLE your_username_here CREATEDB;
  ```
     
 - configure .env file (see .sampledotenv_file), you can use a gmail account but will need 2 factor auth turned off
