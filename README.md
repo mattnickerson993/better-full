@@ -5,7 +5,7 @@ If you'd like to run the project locally
 ^^^^^^^^^^^^^^^^^^^^^
 * clone repository
 
-### How to run the backend
+### How to run the backend?
 
 * enter the backend folder
 * create a virtial environment
