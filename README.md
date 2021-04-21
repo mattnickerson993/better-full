@@ -3,7 +3,7 @@
 
 ## If you'd like to run the project locally
 
-- clone repository
+- clone repository or download as zip file
 
 ### How to run the backend?
 
@@ -48,3 +48,20 @@ $ createdb your_database_name_here
 
     $ python manage.py createsuperuser
  ```
+ 
+ 
+### How to run the frontend?
+
+-You will need node js installed
+
+-enter frontend folder and run the following commands
+
+```
+    $ npm i
+```
+-once finished run
+```
+    $ npm run start
+```
+
+-you will need to run the backend on port 8000 and the frontend on 3000 simultaneously.
