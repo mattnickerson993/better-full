@@ -69,7 +69,13 @@ $ createdb your_database_name_here
     $ export DJANGO_READ_DOT_ENV_FILE=True
 ```
 - run migrations
+```
+    $ python manage.py migrate
+```
 - run server via python manage.py runserver
+```
+    $ python manage.py runserver
+```
 
 
 #### Setting Up Your Users
