@@ -77,7 +77,7 @@ const PatientCreate = () => {
 
     const handleSnackClose = () => {
     setSnackOpen(false);
-    console.log('working')
+    
     };
 
     

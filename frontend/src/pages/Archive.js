@@ -49,7 +49,6 @@ const Archive = () => {
         }
         try {
             const response = await axiosAuthInstance(api.patients.inactivelist, config)
-            console.log(response.data)
             setPatients(response.data)
             setPatientsLoading(false)
         }catch(error){

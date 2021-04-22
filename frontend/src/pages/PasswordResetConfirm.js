@@ -20,7 +20,6 @@ const PasswordResetConfirm = () => {
         event.preventDefault()
         try{
             const res = await confirmPassword(dispatch, {uid, token, new_password: newpassword, re_new_password: newpasswordconfirm})
-            console.log(res)
             history.push("/password-confirm/message")
         }catch(error){
             console.log(error)

@@ -92,7 +92,6 @@ export default function AboutStepper() {
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     if (activeStep === steps.length-1){
-        console.log('here')
         setComplete(true)
     }
   };

@@ -1,11 +1,15 @@
 import axios from 'axios';
 
 
-const baseURL = 'http://127.0.0.1:8000/auth/';
+const baseURL = process.env.NODE_ENV === "development" ? "http://127.0.0.1:8000" : process.env.REACT_APP_API_URL
 
 const axiosAuthInstance = axios.create({
   baseURL: baseURL,
   timeout: 5000,
+  headers: {
+    "Content-Type": "application/json",
+    accept: "application/json",
+  },
 });
 
 axiosAuthInstance.interceptors.response.use(
@@ -18,7 +22,7 @@ axiosAuthInstance.interceptors.response.use(
     // Prevent infinite loops
     if (
       error.response.status === 401 &&
-      originalRequest.url === '/jwt/refresh/'
+      originalRequest.url === '/auth/jwt/refresh/'
     ) {
       window.location.href = "/login/";
       return Promise.reject(error);
@@ -41,13 +45,11 @@ axiosAuthInstance.interceptors.response.use(
 
         if (tokenParts.exp > now) {
           try {
-            const response = await axiosAuthInstance.post("/jwt/refresh/", JSON.stringify({
+            const response = await axiosAuthInstance.post("/auth/jwt/refresh/", JSON.stringify({
               "refresh": refresh
             }));
-			console.log(response)
             setNewHeaders(response);
-            originalRequest.headers["Authorization"] =
-              "JWT " + response.data.access;
+            originalRequest.headers["Authorization"] =`JWT ${response.data.access}`
             return axiosAuthInstance(originalRequest);
           } catch (error) {
             console.log(error);
@@ -68,7 +70,7 @@ axiosAuthInstance.interceptors.response.use(
 );
 
 export function setNewHeaders(response) {
-  axiosAuthInstance.defaults.headers["Authorization"] = "JWT " + response.data.access;
+  axiosAuthInstance.defaults.headers["Authorization"] = `JWT ${response.data.access}`;
   localStorage.setItem("access", response.data.access);
 //   localStorage.setItem("refresh", response.data.refresh);
 }

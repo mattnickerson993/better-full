@@ -21,38 +21,12 @@ const Login = () => {
     const { state, dispatch } = React.useContext(AuthContext)
     const classes = useLoginStyles()
     const history = useHistory()
-    // const { message, dispatchMessage } = React.useContext(MessageContext)
 
 
     React.useEffect(()=>{
         dispatch({type:"RESET_ERROR"})
-        // checkLoginAuth(dispatch)
     },[])
 
-    // async function checkLoginAuth(dispatch){
-    //     if(localStorage.getItem('access')){
-    //         const config = {
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //                 'Accept': 'application/json',
-    //             }
-    //         }
-    //         const body = JSON.stringify({token: localStorage.getItem('access')})
-    //         try{
-    //             const res = await axios.post(api.auth.verify, body, config)
-    //             console.log(res)
-    //             dispatch({
-    //                 type:"AUTHENTICATED_SUCCESS"
-    //             })
-    //         }catch(error){
-    //             console.log(error)
-    
-    //             dispatch({
-    //                 type: 'AUTHENTICATED_FAIL'
-    //             })
-    //         }
-    //     }
-    // }
 
     async function onSubmit(data){
         setLoading(true)
@@ -70,7 +44,6 @@ const Login = () => {
         }
             
         }catch(error){
-            console.log(error)
             setError(error.message || error )
         }
         

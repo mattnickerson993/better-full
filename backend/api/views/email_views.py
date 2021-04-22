@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from django.core.exceptions import PermissionDenied
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives, send_mail
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth import get_user_model
 from django.core.exceptions import PermissionDenied
 from rest_framework import generics, permissions, status
@@ -75,6 +76,8 @@ def patient_confirm_appt(request):
         appointment.save()     
 
         return HttpResponse(status=201)
+    except ObjectDoesNotExist:
+        return Response({'error', 'model not found'}, status=status.HTTP_404_NOT_FOUND)
     except:
         raise Exception("Error posting data")
 
@@ -122,6 +125,9 @@ def patient_review_appt(request):
         appointment = Appointment.objects.get(token= appointment_token)
         serializer = AppointmentDetailSerializer(appointment)
         return Response(serializer.data,status=status.HTTP_200_OK )
+
+    except ObjectDoesNotExist:
+        return Response({'error', 'model not found'}, status=status.HTTP_404_NOT_FOUND)
     except:
         return Response({'error': 'error fetching appointment data'},status = status.HTTP_404_NOT_FOUND)
 
@@ -147,6 +153,9 @@ def patient_final_feedback(request):
         appointment.save()
         patient.save()
         return Response(status=status.HTTP_200_OK )
+    except ObjectDoesNotExist:
+        return Response({'error', 'model not found'}, status=status.HTTP_404_NOT_FOUND)
+
     except:
         return Response({'error': 'error posting data'},status = status.HTTP_400_BAD_REQUEST)
     
@@ -165,6 +174,8 @@ def doctor_view_feedback(request, id):
         appointment = Appointment.objects.get(id=id)
         serializer = AppointmentDetailSerializer(appointment)
         return Response(serializer.data,status=status.HTTP_200_OK )
+    except ObjectDoesNotExist:
+        return Response({'error', 'model not found'}, status=status.HTTP_404_NOT_FOUND)
     except:
         return Response({'error': 'Error fetching appointment data' },status = status.HTTP_400_BAD_REQUEST)
 
@@ -184,7 +195,6 @@ def doctor_feedback_email(request, id ):
         doctor = appointment.clinician.last_name
         subject = f"Appointment Feedback email from Dr. {doctor}"
         email = appointment.patient.email
-        print(content, subject, email)
         emailMessage = EmailMultiAlternatives(subject=subject, body=content, to=[email,],)
         emailMessage.send(fail_silently=False)
         return Response(status=status.HTTP_200_OK )

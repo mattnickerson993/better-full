@@ -18,7 +18,6 @@ const ActivateAccount = () => {
         e.preventDefault()
         try{
             const res = await verify(dispatch, { uid, token })
-            console.log(res)
             setVerified(true)
         }catch(err){
             console.log(err)

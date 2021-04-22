@@ -50,7 +50,6 @@ export async function checkAuthenticated(dispatch) {
         const body = JSON.stringify({token: localStorage.getItem('access')})
         try{
             const res = await axiosAuthInstance.post(api.auth.verify, body, config)
-            console.log(res)
             dispatch({
                 type:"AUTHENTICATED_SUCCESS"
             })
@@ -79,7 +78,6 @@ export async function load_user(dispatch){
     
         try{
             const res = await axiosAuthInstance.get(api.auth.getuser, config)
-            console.log(res)
             dispatch({
                 type: "USER_LOADED_SUCCESS",
                 payload: res.data
