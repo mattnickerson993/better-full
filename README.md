@@ -104,7 +104,7 @@ $ createdb your_database_name_here
 -you will need to run the backend on port 8000 and the frontend on 3000 via two terminal windows.
 
 
-##Reflection
+## Reflection
 
 **Overall:** 
 -Better was a significant step forward for me in terms of complexity. I was able to integrate a separate django backend and react frontend into a functioning webapp. The webapp also makes use of django-rest-framework and material-ui. The backend has significant test coverage which was helpful during development. I feel the webapp has a legitimate purpose and usefulness. 
