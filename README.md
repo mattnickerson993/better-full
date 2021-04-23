@@ -125,3 +125,11 @@ $ createdb your_database_name_here
 - Frontend test coverage is lacking
 - Auth tokens are stored in local storage. I realize this is a controversial topic. As this was the first time I implemented JSON web tokens I felt it was an appropriate choice for learning purposes. As my skills improve, I will look to address  this.
 
+**The Future:**
+- I feel a webpp like this could be integrated effectively into medical documentation software to help reduce the number of tools a clinician must manage simultaneously, while helping patients and clinicians stay on the same page before, during and after appointments
+- I will look to design a more secure auth system, potentially relying more on backend middleware
+- Frontend test coverage, potentially with cypress
+- I look to make more efficient use of django rest framework with more comprehensive and specific error handling.
+- Looking to integrate Github actions in project flow
+
+
