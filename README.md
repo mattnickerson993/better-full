@@ -118,3 +118,10 @@ $ createdb your_database_name_here
 - “Use your voice” functionality was implemented successfully on the frontend.
 - Numerous material UI features were integrated into the frontend such as color coded circular progress bars and sorting functionality, improving the experience on the frontend. 
 
+
+**The Bad/Areas to improve:**
+- Although the auth system works as intended, it is not as efficient on the front end as I would like it to be
+- Most of the site has form validation and error handling, but it is a bit lacking in a few areas due to time constraints.
+- Frontend test coverage is lacking
+- Auth tokens are stored in local storage. I realize this is a controversial topic. As this was the first time I implemented JSON web tokens I felt it was an appropriate choice for learning purposes. As my skills improve, I will look to address  this.
+
