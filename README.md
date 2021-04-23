@@ -133,6 +133,6 @@ $ createdb your_database_name_here
 - Looking to integrate Github actions in project flow
 
 
-##Timeline
+## Timeline
 - Project Completed April 2021
 
