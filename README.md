@@ -113,8 +113,8 @@ $ createdb your_database_name_here
 **The Good/ My growth:**
 - Development, although not “test driven” incorporated a lot more tests on the backend compared to previous projects, helping me tremendously when refactoring
 - I was able to implement an auth system using Json web tokens via Djoser, and Django-rest-framework-simplejwt that includes access and refresh tokens
-- I began using UUIDs as primary keys compared to standard integer based Ids in previous projects ( I decided to make this change half way through the project but was able to refactor successfully)
-- I was able to refactor a significant portion of the frontend, reducing the complexity and size many of the main pages
+- I began using UUIDs as primary keys compared to standard integer based ids in previous projects ( I decided to make this change half way through the project but was able to refactor successfully)
+- I was able to refactor a significant portion of the frontend, reducing the complexity and size of many of the main pages
 - “Use your voice” functionality was implemented successfully on the frontend.
 - Numerous material UI features were integrated into the frontend such as color coded circular progress bars and sorting functionality, improving the experience on the frontend. 
 
