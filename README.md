@@ -1,5 +1,12 @@
 # Better
 
+## Video Walkthrough
+[Better](https://www.youtube.com/watch?v=fWn0jcdD2R4)
+
+## Demo Site
+
+[Better](https://zealous-cori-8172ed.netlify.app/)
+
 ## About
 
 Better is a webapp designed to to improve the quality of primary care physician visits. On average, patients receive 8-12 minutes with their PCP per visit and are interrupted within 18 seconds once the visit begins [source](https://www.mdpi.com/2226-4787/9/1/42). A primary care visit is overwhelming for both patients and physicians, there is not one singular cause of difficulty. Better provides a way for patients to organize questions and concerns ahead of a visit. The physician can review this prior to the visit so both parties are adequately prepared. Both patient and physician can review the questions/concerns together during the visit. At conclusion of the visit, patients can provide feedback on whether their questions and concerns were adequately answered. Finally, the physician has an opporunity to view this feedback and reach out to the patient if necessary. This ensures both patient and physician are on the same page before, during and after the visit.
